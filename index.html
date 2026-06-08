@@ -313,6 +313,108 @@
   }
   .lightbox-close:hover { color: white; }
 
+
+  /* ── RESPONSIVE / MOBILE ── */
+  @media (max-width: 768px) {
+
+    /* Header */
+    .header-inner {
+      flex-wrap: wrap;
+      padding: 0.75rem 1rem;
+      gap: 0.75rem;
+    }
+    .header-logo-img { height: 44px; }
+    .header-divider { display: none; }
+    .header-title-block { flex: 1 1 auto; min-width: 0; }
+    .header-title { font-size: 15px; }
+    .header-right {
+      width: 100%;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid rgba(6,20,40,0.15);
+    }
+    .header-meta-item { text-align: left; }
+    .revision-badge { font-size: 9px; padding: 4px 10px; }
+
+    /* Revisions bar */
+    .revisions-inner { padding: 5px 1rem; flex-wrap: wrap; gap: 6px; }
+    .revision-entry { font-size: 9px; }
+
+    /* Container */
+    .container { padding: 1.25rem 1rem; }
+
+    /* Section header */
+    .section-header {
+      flex-wrap: wrap;
+      padding: 0.75rem 1rem;
+      gap: 6px;
+    }
+    .section-num { font-size: 8px; }
+    .section-title { font-size: 14px; }
+    .section-desc { font-size: 10px; }
+    .section-tag { font-size: 8px; padding: 3px 8px; }
+
+    /* Concept header */
+    .concept-header { flex-wrap: wrap; gap: 5px; padding: 8px 12px; }
+    .concept-name { font-size: 11px; width: 100%; }
+
+    /* Images — stack day/night vertically on mobile */
+    .image-pair {
+      grid-template-columns: 1fr;
+    }
+    .image-pair .img-wrap + .img-wrap {
+      border-left: none;
+      border-top: 3px solid var(--navy);
+    }
+    .img-wrap img { max-height: 260px; object-fit: cover; }
+    .zoom-hint { font-size: 9px; padding: 2px 6px; }
+
+    /* Info panels — single column */
+    .info-panels {
+      grid-template-columns: 1fr !important;
+    }
+    .info-panel {
+      border-right: none !important;
+      border-bottom: 1px solid var(--border);
+    }
+    .info-panel:last-child { border-bottom: none; }
+
+    /* Plant list */
+    .plant-toggle-row { padding: 10px 12px; }
+    .plant-preview { padding: 0 12px 10px; }
+    .plant-full { padding: 0 12px 12px; }
+    .plant-table { font-size: 11px; }
+    .plant-table thead th,
+    .plant-table tbody td { padding: 5px 8px; }
+
+    /* Concept footer */
+    .concept-footer { padding: 8px 12px; }
+    .btn-chosen { font-size: 9px; padding: 6px 14px; }
+
+    /* Section notes */
+    .section-notes { padding: 10px 12px; }
+
+    /* Lightbox */
+    .lightbox-inner { max-width: 98vw; max-height: 98vh; }
+    .lightbox-inner img { max-width: 98vw; max-height: 80vh; }
+    .lightbox-close { font-size: 32px; top: -40px; }
+    .lightbox-caption { font-size: 9px; }
+
+    /* Pending */
+    .pending { padding: 1rem; }
+    .pending strong { font-size: 13px; }
+  }
+
+  @media (max-width: 480px) {
+    .header-title { font-size: 13px; }
+    .section-title { font-size: 13px; }
+    .concept-name { font-size: 10px; }
+    .header-right { gap: 0.5rem; }
+    .header-meta-value { font-size: 11px; }
+    .img-wrap img { max-height: 220px; }
+  }
+
   @media print {
     .btn-chosen, .lightbox { display: none !important; }
     body { background: white; }
